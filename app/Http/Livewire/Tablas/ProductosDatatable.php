@@ -40,7 +40,7 @@ class ProductosDatatable extends DataTableComponent
             Column::make('Marca', 'marca')->sortable(),
             Column::make('Stock', 'stock')->sortable(),
             BooleanColumn::make('Activo', 'activo')->sortable(),
-            Column::make('Estado', 'estado')->sortable(),
+            Column::make('Estado', 'estado.nombre')->sortable(),
             Column::make('Codigo', 'codigo')->sortable(),
             Column::make('Precio', 'precio')->sortable(),
             Column::make('Ganancia', 'ganancia')->sortable(),

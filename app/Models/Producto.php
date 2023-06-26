@@ -14,7 +14,7 @@ class Producto extends Model
         'marca',
         'stock',
         'activo',
-        'estado',
+        'id_estado',
         'codigo',
         'precio',
         'ganancia',
@@ -28,5 +28,10 @@ class Producto extends Model
     public function categoria()
     {
         return $this->hasOne(Categoria::class, 'id', 'id_categoria');
+    }
+
+    public function estado()
+    {
+        return $this->hasOne(Estado::class, 'id', 'id_categoria');
     }
 }

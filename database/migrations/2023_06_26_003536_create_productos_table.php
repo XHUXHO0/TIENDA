@@ -24,7 +24,8 @@ return new class() extends Migration {
             $table->string('nombre')->nullable();
             $table->string('marca')->nullable();
             $table->integer('stock')->nullable();
-            $table->string('estado')->nullable();
+            $table->unsignedBigInteger('id_estado')->nullable();
+            $table->foreign('id_estado')->on('estados')->references('id');
             $table->boolean('activo')->nullable();
             $table->string('codigo')->nullable();
             $table->double('precio', 10, 2)->nullable();
@@ -34,8 +35,7 @@ return new class() extends Migration {
             $table->string('fecha_de_expiracion')->nullable();
             $table->string('tipo_de_meditas')->nullable();
             $table->unsignedBigInteger('id_categoria')->nullable();
-            $table->foreign('id_categoria')->on('categorias')
-            ->references('id');
+            $table->foreign('id_categoria')->on('categorias')->references('id');
             $table->timestamps();
         });
     }

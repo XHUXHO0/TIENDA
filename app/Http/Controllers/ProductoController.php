@@ -76,4 +76,8 @@ class ProductoController extends Controller
 
         return redirect()->route('productos.index');
     }
+
+    public function codigobarras(Producto $producto){
+
+    }
 }
